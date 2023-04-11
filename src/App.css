@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.signup-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.already-account a{
+  color: #FB641B;
+  cursor: pointer;
+}
+.signup_form {
+  padding: 20px;
+}
+.signup_form .primary-solid{
+margin-top: 30px;
+}
+.app{
+  width: 500px;
+}
+.sub-title{
+  font-size: 14px;
+}
+.title{
+  font-size: 30px;
+  margin-bottom: 0;
+}
+.toggle{
+  display: flex;
+}
+.toggle .switch {
+margin-left: 15px;
+}
+.primary-solid {
+  background-color: #FB641B;
+  color:rgb(255, 255, 255);
+  border: unset;
+  font-size: 14px;
+  width: 180px;
+  padding: 1rem;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+.signup-details input {
+  height: 40px;
+  border: 1px solid #e3e3e3;
+  padding: 3px 10px;
+  font-size: 13px;
+  width: 300px;
+  border-radius: 3px;
+}
+.form-label {
+  flex: 1;
+  margin-right: 7px;
+}
+.form-label label{
+  font-size: 14px;
+  font-weight: 600;
+}
+.ext_main_div {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.ext_main_div p {
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0;
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 13px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: -1px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  z-index: 99999;
+  box-shadow: 0px 0px 7px #7b7b7b;
+}
+
+input:checked + .slider {
+  background-color: #30ab1c;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #30ab1c;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(9px);
+  -ms-transform: translateX(9px);
+  transform: translateX(9px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.history-page{
+  padding: 20px;
+}
+.history-details{
+  border-bottom: 1px solid #cfcfcf;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+.history-time{
+  display: flex;
+  justify-content: space-between;
+}
+.history-time span{
+font-weight: 600;
+font-size: 11px;
+}

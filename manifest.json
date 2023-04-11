@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "name": "Frontdoor Chrome Extension",
+  "description": "Assignment for Frontdoor Chrome extension",
+  "permissions": ["storage", "contextMenus", "activeTab", "scripting", "tabs"],
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["js/content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "action": {
+      "default_popup": "js/index.html",
+      "default_title": "Frontdoor Chrome Extension"
+  }
+}
