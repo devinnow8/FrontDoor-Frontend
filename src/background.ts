@@ -10,6 +10,12 @@ chrome.runtime.onInstalled.addListener(() => {
   });
 });
 
+chrome.browserAction.setIcon({
+  path: {
+    19: "icon.png",
+  },
+});
+
 const addTooltipDiv = () => {
   const selection = window.getSelection();
   if (selection && selection.rangeCount > 0) {
