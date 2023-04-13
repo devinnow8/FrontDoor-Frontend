@@ -1,9 +1,17 @@
 {
   "version": "1.0.0",
   "manifest_version": 3,
-  "name": "Frontdoor Chrome Extension",
-  "description": "Assignment for Frontdoor Chrome extension",
+  "name": "Word Wizard",
+  "description": "Word Wizard Chrome extension",
   "permissions": ["storage", "contextMenus", "activeTab", "scripting", "tabs"],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
   "background": {
     "service_worker": "js/background.js"
   },
@@ -16,7 +24,7 @@
     }
   ],
   "action": {
-      "default_popup": "js/index.html",
-      "default_title": "Frontdoor Chrome Extension"
+    "default_popup": "js/index.html",
+    "default_title": "Word Wizard Chrome Extension"
   }
 }
