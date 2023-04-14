@@ -4,6 +4,11 @@
   "name": "Word Wizard",
   "description": "Word Wizard Chrome extension",
   "permissions": ["storage", "contextMenus", "activeTab", "scripting", "tabs"],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
   "background": {
     "service_worker": "js/background.js"
   },
