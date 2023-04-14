@@ -3,17 +3,11 @@ chrome.runtime.onInstalled.addListener(() => {
 
   chrome.contextMenus.create({
     id: "highlight",
-    title: "Frontdoor Smart Search",
+    title: "Word Wizard Smart Search",
     contexts: ["selection"],
     enabled: false,
     visible: false,
   });
-});
-
-chrome.browserAction.setIcon({
-  path: {
-    19: "icon.png",
-  },
 });
 
 const addTooltipDiv = () => {
@@ -29,6 +23,8 @@ const addTooltipDiv = () => {
         left: boundingRect.left + window.pageXOffset,
       },
     };
+
+    // document.getElementById("tmp-chrome-ext") && document.getElementById("tmp-chrome-ext")?.remove();
 
     let tooltipElement: HTMLElement;
 
