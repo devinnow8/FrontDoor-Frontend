@@ -10,6 +10,7 @@ export type Page = "Signin" | "Signup" | "History";
 
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>("Signin");
+  const [errorMsg, setErrorMsg] = useState("");
 
   const getComponent = (currentPage: Page) => {
     switch (currentPage) {
@@ -27,7 +28,7 @@ function App() {
   const Component = useMemo(() => getComponent(currentPage), [currentPage]);
 
   return (
-    <AuthProvider setCurrentPage={setCurrentPage}>
+    <AuthProvider setCurrentPage={setCurrentPage} setErrorMsg={setErrorMsg} errorMsg={errorMsg}>
       <div className="app">
         <div className="ext_main_div">
           <div className="toggle">

@@ -1,6 +1,8 @@
 import axios from "axios";
 
 let baseUrl = "https://frontdoor-be-2ct3.onrender.com/";
+// let baseUrl = "http://localhost:3000/";
+
 const response = (data: any, error: any) => ({ data, error });
 
 async function post(endpointURL: any, data: any, config: any) {
@@ -8,7 +10,7 @@ async function post(endpointURL: any, data: any, config: any) {
     const serverResponse = await axios.post(`${baseUrl}${endpointURL}`, data, config);
     return response(serverResponse, "");
   } catch (error: any) {
-    return response("", error.message);
+    return response("", error.response.data);
   }
 }
 
