@@ -143,8 +143,8 @@ const Signin: React.FC<SigninPropsType> = ({ onSetCurrentPage }: SigninPropsType
                 required
               />
             </div>
-            {errorMsg && <p>{errorMsg}</p>}
-            <button type="submit" className="primary-solid" disabled={isLoader}>
+            {errorMsg && <p className="error-msg">{errorMsg}</p>}
+            <button type="submit" className={isLoader ? "loader-disbale primary-solid" : "primary-solid"} disabled={isLoader}>
               Sign In
             </button>
           </form>

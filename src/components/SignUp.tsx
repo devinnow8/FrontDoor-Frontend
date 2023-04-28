@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import AuthContext from "../context/AuthContext";
 
 interface SignupState {
@@ -64,6 +64,7 @@ interface SignupPropsType {
 const Signup: React.FC<SignupPropsType> = ({ onSetCurrentPage }: SignupPropsType) => {
   const [state, dispatch] = React.useReducer(signupReducer, initialState);
   const { name, email, password, repeatPassword, error, isLoading } = state;
+  const [isLoader, setIsLoader] = useState<any>(false);
   const { handleSignUp, errorMsg, setErrorMsg }: any = useContext(AuthContext);
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -73,7 +74,7 @@ const Signup: React.FC<SignupPropsType> = ({ onSetCurrentPage }: SignupPropsType
       setErrorMsg("Repeat password does not matches the current password");
     } else {
       try {
-        await handleSignUp(email, password, name);
+        await handleSignUp(email, password, name, setIsLoader);
         dispatch({ type: "success" });
       } catch (error: any) {}
     }
@@ -176,8 +177,8 @@ const Signup: React.FC<SignupPropsType> = ({ onSetCurrentPage }: SignupPropsType
                 required
               />
             </div>
-            {errorMsg && <p>{errorMsg}</p>}
-            <button type="submit" className="primary-solid">
+            {errorMsg && <p className="error-msg">{errorMsg}</p>}
+            <button type="submit" className={isLoader ? "loader-disbale primary-solid" : "primary-solid"} disabled={isLoader}>
               Sign Up
             </button>
           </form>

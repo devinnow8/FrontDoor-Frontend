@@ -1,50 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 * {
   box-sizing: border-box;
 }
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 .signup-details {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
 }
-.already-account a{
-  color: #FB641B;
+.already-account a {
+  color: #fb641b;
   cursor: pointer;
 }
 .signup_form {
   padding: 20px;
 }
-.signup_form .primary-solid{
-margin-top: 30px;
+.signup_form .primary-solid {
+  cursor: pointer;
 }
-.app{
+.signup_form .error-msg {
+  color: #fb641b;
+}
+.app {
   width: 500px;
 }
-.sub-title{
+.sub-title {
   font-size: 14px;
 }
-.title{
+.title {
   font-size: 30px;
   margin-bottom: 0;
 }
-.toggle{
+.toggle {
   display: flex;
 }
 .toggle .switch {
-margin-left: 15px;
+  margin-left: 15px;
+}
+.loader-disbale {
+  opacity: 0.3;
 }
 .primary-solid {
-  background-color: #FB641B;
-  color:rgb(255, 255, 255);
+  background-color: #fb641b;
+  color: rgb(255, 255, 255);
   border: unset;
   font-size: 14px;
   width: 180px;
   padding: 1rem;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+  cursor: pointer;
 }
 .signup-details input {
   height: 40px;
@@ -58,7 +65,7 @@ margin-left: 15px;
   flex: 1;
   margin-right: 7px;
 }
-.form-label label{
+.form-label label {
   font-size: 14px;
   font-weight: 600;
 }
@@ -136,19 +143,19 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-.history-page{
+.history-page {
   padding: 20px;
 }
-.history-details{
+.history-details {
   border-bottom: 1px solid #cfcfcf;
   padding-bottom: 15px;
   margin-bottom: 15px;
 }
-.history-time{
+.history-time {
   display: flex;
   justify-content: space-between;
 }
-.history-time span{
-font-weight: 600;
-font-size: 11px;
+.history-time span {
+  font-weight: 600;
+  font-size: 11px;
 }

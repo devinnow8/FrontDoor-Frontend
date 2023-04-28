@@ -63,8 +63,9 @@ function AuthProvider({ children, setCurrentPage, setErrorMsg, errorMsg }: AuthP
     }
   };
 
-  const handleSignUp = async (email: String, password: String, name: String) => {
+  const handleSignUp = async (email: String, password: String, name: String, setIsLoader: any) => {
     try {
+      setIsLoader(true);
       let data = JSON.stringify({
         username: email,
         password,
@@ -79,10 +80,14 @@ function AuthProvider({ children, setCurrentPage, setErrorMsg, errorMsg }: AuthP
       if (response.data) {
         setUser({ username: email, name, ...response?.data?.data });
         setCurrentPage("Signin");
+        setIsLoader(false);
       } else {
         setErrorMsg(response.error.message);
+        setIsLoader(false);
       }
-    } catch (error) {}
+    } catch (error) {
+      setIsLoader(false);
+    }
   };
 
   return <AuthContext.Provider value={{ user, handleSignIn, handleSignUp, errorMsg, setErrorMsg }}>{children}</AuthContext.Provider>;
